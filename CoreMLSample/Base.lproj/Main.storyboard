@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,140 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i9X-wK-1Za">
+                                <rect key="frame" x="0.0" y="65" width="375" height="106"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree" translatesAutoresizingMaskIntoConstraints="NO" id="uag-Oe-z5A">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="AvW-hh-np8" appends="YES" id="xm8-fk-Oyl"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fort" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-Ug-E4Y">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wjg-tf-Ihg" appends="YES" id="D2b-e4-bJ5"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="River" translatesAutoresizingMaskIntoConstraints="NO" id="KtA-zw-jqa">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Bv4-57-ltb" appends="YES" id="BHN-MC-FSg"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Yw3-ie-28X"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-5Y-M4w">
+                                <rect key="frame" x="0.0" y="179" width="375" height="106"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hill" translatesAutoresizingMaskIntoConstraints="NO" id="bWs-9o-TjN">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uer-Sz-RB7" appends="YES" id="bF8-fN-JLt"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Greenary" translatesAutoresizingMaskIntoConstraints="NO" id="9zl-Sz-eZJ">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XY1-G9-Qzo" appends="YES" id="tig-R4-aAx"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water Flow" translatesAutoresizingMaskIntoConstraints="NO" id="N5P-vU-Ym3">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="106"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gGj-AG-Ymr" appends="YES" id="JC3-XF-AJi"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="yGf-Uq-ThJ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNV-Et-JKo">
+                                <rect key="frame" x="113" y="381" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="0.2221197486" green="0.23502361769999999" blue="0.8051064014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Core ML Image Process" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-I9-gq3">
+                                <rect key="frame" x="87" y="29" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i9X-wK-1Za" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cry-iP-0FK"/>
+                            <constraint firstItem="i9X-wK-1Za" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="a6V-Uv-iPa"/>
+                            <constraint firstItem="u1t-5Y-M4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fbK-a4-715"/>
+                            <constraint firstItem="u1t-5Y-M4w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hpL-Ti-9Yh"/>
+                            <constraint firstItem="u1t-5Y-M4w" firstAttribute="top" secondItem="i9X-wK-1Za" secondAttribute="bottom" constant="8" id="o1Z-R7-cXq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i9X-wK-1Za" secondAttribute="trailing" id="qfn-2P-5wg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageTypeLabel" destination="cNV-Et-JKo" id="gpB-p0-Gik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AvW-hh-np8">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="EuB-9x-fPH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wjg-tf-Ihg">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="SuG-hh-hdo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Bv4-57-ltb">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="4Y8-O0-eAQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uer-Sz-RB7">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="ih2-3o-ndV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XY1-G9-Qzo">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="ksr-ZC-xzG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gGj-AG-Ymr">
+                    <connections>
+                        <action selector="tappedOnImageWithSender:" destination="BYZ-38-t0r" id="OhT-zg-yiv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fort" width="224" height="224"/>
+        <image name="Greenary" width="224" height="224"/>
+        <image name="Hill" width="224" height="224"/>
+        <image name="River" width="224" height="224"/>
+        <image name="Tree" width="224" height="224"/>
+        <image name="Water Flow" width="224" height="224"/>
+    </resources>
 </document>
